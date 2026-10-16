@@ -95,8 +95,12 @@ public class WidgetsMaroonThemeViewComponent : NopViewComponent
         css.AppendLine(".footer-powered-by a:hover, .footer-powered-by a:focus {");
         css.AppendLine($"  color: {hoverColor};");
         css.AppendLine("}");
-        //form focus state (bootstrap defaults to a hard-coded blue)
-        css.AppendLine(".form-control:focus {");
+        //form focus state: DefaultClean's storefront inputs use bare input[type=...]/textarea/select
+        //selectors (no .form-control class, which is a Bootstrap/Admin-area convention), and its own
+        //styles.css hard-codes border-color: #ccc on focus, so both are targeted here
+        css.AppendLine(".form-control:focus,");
+        css.AppendLine("input[type=\"text\"]:focus, input[type=\"email\"]:focus, input[type=\"tel\"]:focus,");
+        css.AppendLine("input[type=\"password\"]:focus, input[type=\"number\"]:focus, textarea:focus, select:focus {");
         css.AppendLine($"  border-color: {primaryColor};");
         css.AppendLine($"  box-shadow: 0 0 0 .2rem rgba({primaryRgb}, .25);");
         css.AppendLine("}");
