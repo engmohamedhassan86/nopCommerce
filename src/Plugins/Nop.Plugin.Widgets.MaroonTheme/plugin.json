@@ -1,0 +1,11 @@
+{
+  "Group": "Widgets",
+  "FriendlyName": "Maroon Theme Color",
+  "SystemName": "Widgets.MaroonTheme",
+  "Version": "5.00.0",
+  "SupportedVersions": [ "5.00" ],
+  "Author": "PrimeKidz",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.MaroonTheme.dll",
+  "Description": "Recolors the public storefront's primary UI color to maroon"
+}
